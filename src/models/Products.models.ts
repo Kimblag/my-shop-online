@@ -38,10 +38,14 @@ const productSchema = new mongoose.Schema<IProduct>({
         type: Number,
         default: 0,
     },
-   reviews: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Review',
-   }
+    reviews: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Review',
+    },
+    deleted: {
+        type: Boolean,
+        default: false,
+    },
 });
 
 

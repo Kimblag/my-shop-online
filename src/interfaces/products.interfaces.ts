@@ -12,4 +12,5 @@ export default interface IProduct {
     category: string;
     numOfReviews: number;
     reviews: number | IReview;
+    deleted: boolean;
 }

@@ -1,10 +1,15 @@
-import { Request, Response, Router } from 'express';
+import { Router } from 'express';
+import { createProducts, deleteProducts, getProducts, updatedProducts } from '../controllers/products.controllers';
 
 const router = Router();
 
 
-router.get('/', (req: Request, res: Response) => {
-    res.send('Hello World');
-});
+router.get('/', getProducts);
+router.post('/', createProducts);
+router.put('/:id', updatedProducts);
+
+//* soft delete, just updated deleted property to true.
+router.put('/:id', deleteProducts);
+
 
 export default router;
