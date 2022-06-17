@@ -1,4 +1,4 @@
-import IProduct from "./products.interfaces";
+import IProduct from "./products.interfaces"
 
 export default interface IReview {
     id: string;

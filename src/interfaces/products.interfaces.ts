@@ -1,4 +1,4 @@
-import IReview from "./reviews.interfaces";
+import IReview from "./reviews.interfaces"
 
 export default interface IProduct {
     id?: string;
@@ -11,6 +11,6 @@ export default interface IProduct {
     image: string;
     category: string;
     numOfReviews: number;
-    reviews: number | IReview;
+    reviews: IReview[];
     deleted: boolean;
 }
