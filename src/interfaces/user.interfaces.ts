@@ -2,18 +2,13 @@ import mongoose from 'mongoose'
 import { IPayment } from './payment.interfaces';
 
 
-export enum UserRole {
-    User,
-    Admin,
-}
-
 export default interface IUser extends mongoose.Document {
     _id: string;
     name: string;
     lastname: string;
     email: string;
     password: string;
-    role: UserRole;
+    isAdmin: boolean;
     address: {
         country: string;
         city: string;
