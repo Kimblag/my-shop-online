@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema<IUser>({
     lastname: { type: String, required: [true, 'Lastname is required'] },
     email: { type: String, required: [true, 'Email is required'], unique: true },
     password: { type: String, required: [true, 'Password is required'] },
-    role: { type: Number, required: [true, 'Role is required'], default: 0 },
+    isAdmin: { type: Boolean, default: false},
     address: {
         country: { type: String },
         city: { type: String },
