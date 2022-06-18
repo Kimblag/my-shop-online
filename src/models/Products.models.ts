@@ -18,7 +18,7 @@ const productSchema = new mongoose.Schema<IProduct>({
         createdAt: { type: Date, required: true },
     }],
     deleted: { type: Boolean, default: false },
-});
+}, { timestamps: true })
 
 
 export default mongoose.model<IProduct>('Product', productSchema)

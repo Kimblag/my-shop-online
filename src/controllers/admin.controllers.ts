@@ -53,7 +53,9 @@ export const deleteUserController: RequestHandler = async (req: Request, res: Re
 
 export const getUsersController: RequestHandler = async (req: Request, res: Response): Promise<any> => {
     try {
-        const users = await UsersModels.find();
+        const query = req.query.new
+        console.log(query)
+        const users = query ? await UsersModels.find().sort({ _id: -1 }).limit(5) : await UsersModels.find();
         (users.length > 0)
             ? res.status(200).send(<IServerResponse>({ status: 'success', data: users }))
             : res.status(200).send(<IServerResponse>({ status: 'success', message: 'No users found' }))
@@ -69,6 +71,22 @@ export const getUserController: RequestHandler = async (req: Request, res: Respo
             : res.status(404).send(<IServerResponse>({ status: 'error', errors: { message: 'No user found' } }))
     } catch (error: any) {
         return res.status(500).send(<IServerResponse>({ status: 'error', errors: { message: error.message || error } }))
+    }
+}
+
+export const getUsersStatsController: RequestHandler = async (req: Request, res: Response): Promise<any> => {
+    const date = new Date()
+    const lastYear = new Date(date.setFullYear(date.getFullYear() - 1))
+
+    try {
+        const data = await UsersModels.aggregate([
+            { $match: { createdAt: { $gte: lastYear } } },
+            { $project: { month: { $month: "$createdAt" } } },
+            { $group: { _id: "$month", count: { $sum: 1 } } },
+        ])
+        res.status(200).send(<IServerResponse>({ status: 'success', data }))
+    } catch (error) {
+
     }
 }
 
