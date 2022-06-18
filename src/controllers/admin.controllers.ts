@@ -61,6 +61,16 @@ export const getUsersController: RequestHandler = async (req: Request, res: Resp
         return res.status(500).send(<IServerResponse>({ status: 'error', errors: { message: error.message || error } }))
     }
 }
+export const getUserController: RequestHandler = async (req: Request, res: Response): Promise<any> => {
+    try {
+        const user = await UsersModels.findById(req.params.id);
+        user
+            ? res.status(200).send(<IServerResponse>({ status: 'success', data: user }))
+            : res.status(404).send(<IServerResponse>({ status: 'error', errors: { message: 'No user found' } }))
+    } catch (error: any) {
+        return res.status(500).send(<IServerResponse>({ status: 'error', errors: { message: error.message || error } }))
+    }
+}
 
 
 export const createProductController: RequestHandler = async (req: Request, res: Response): Promise<any> => {
@@ -91,7 +101,7 @@ export const deleteProductController: RequestHandler = async (req: Request, res:
         let product = await ProductsModels.findByIdAndUpdate(req.params.id, { deleted: true })
         product
             ? res.send({ message: 'Product deleted successfully' })
-            : res.status(500).send({ message: 'Product not found' })
+            : res.status(404).send({ message: 'Product not deleted' })
     } catch (error: any) {
         res.status(500).send({ message: error.message })
     };

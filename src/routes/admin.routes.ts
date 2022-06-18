@@ -1,6 +1,6 @@
 import { RequestHandler, Router } from 'express'
 import passport from 'passport'
-import { createProductController, createUserController, deleteProductController, deleteUserController, getUsersController, updateProductController, updateUserController } from '../controllers/admin.controllers'
+import { createProductController, createUserController, deleteProductController, deleteUserController, getUserController, getUsersController, updateProductController, updateUserController } from '../controllers/admin.controllers'
 import { roleVerifyService } from '../services/verifyRole.services'
 
 const router = Router()
@@ -14,6 +14,7 @@ router.post('/create/user', passport.authenticate('jwt', {session: false}), role
 router.put('/update/user', passport.authenticate('jwt', {session: false}), roleVerifyService as RequestHandler, updateUserController)
 router.put('/delete/user', passport.authenticate('jwt', {session: false}), roleVerifyService as RequestHandler, deleteUserController)
 router.get('/users', passport.authenticate('jwt', {session: false}), roleVerifyService as RequestHandler, getUsersController)
+router.get('/user/:id', passport.authenticate('jwt', {session: false}), roleVerifyService as RequestHandler, getUserController)
 
 //Products
 router.post('/create/product', passport.authenticate('jwt', {session: false}), roleVerifyService as RequestHandler, updateProductController)
