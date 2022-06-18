@@ -1,6 +1,6 @@
 import { RequestHandler, Router } from 'express'
 import passport from 'passport'
-import { createProductController, deleteProductController, updateProductController, updateUserController } from '../controllers/admin.controllers'
+import { createProductController, createUserController, deleteProductController, deleteUserController, getUsersController, updateProductController, updateUserController } from '../controllers/admin.controllers'
 import { roleVerifyService } from '../services/verifyRole.services'
 
 const router = Router()
@@ -10,10 +10,10 @@ const router = Router()
  * @verifyRoleService - as RequestHandler because it will throw error types.
  */
 
-router.post('/create/user', passport.authenticate('jwt', {session: false}), roleVerifyService as RequestHandler, updateUserController)
+router.post('/create/user', passport.authenticate('jwt', {session: false}), roleVerifyService as RequestHandler, createUserController)
 router.put('/update/user', passport.authenticate('jwt', {session: false}), roleVerifyService as RequestHandler, updateUserController)
-router.delete('/delete/user', passport.authenticate('jwt', {session: false}), roleVerifyService as RequestHandler, updateUserController)
-router.get('/users', passport.authenticate('jwt', {session: false}), roleVerifyService as RequestHandler, updateUserController)
+router.put('/delete/user', passport.authenticate('jwt', {session: false}), roleVerifyService as RequestHandler, deleteUserController)
+router.get('/users', passport.authenticate('jwt', {session: false}), roleVerifyService as RequestHandler, getUsersController)
 
 //Products
 router.post('/create/product', passport.authenticate('jwt', {session: false}), roleVerifyService as RequestHandler, updateProductController)

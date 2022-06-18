@@ -9,6 +9,7 @@ export default interface IUser extends mongoose.Document {
     email: string;
     password: string;
     isAdmin: boolean;
+    isActive: boolean;
     address: {
         country: string;
         city: string;
