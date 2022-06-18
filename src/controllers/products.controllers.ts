@@ -32,36 +32,3 @@ export const getProduct: RequestHandler = async (req: Request, res: Response): P
     }
 }
 
-export const createProducts: RequestHandler = async (req: Request, res: Response): Promise<any> => {
-    try {
-        let product = new ProductsModels(req.body)
-        await product.save()
-        product
-            ? res.send({ message: 'Product created successfully', product })
-            : res.status(500).send({ message: 'Product not created' })
-    } catch (error: any) {
-        res.status(500).send({ message: error.message })
-    }
-}
-
-export const updatedProducts: RequestHandler = async (req: Request, res: Response): Promise<any> => {
-    try {
-        let product = await ProductsModels.findByIdAndUpdate(req.params.id, req.body)
-        product
-            ? res.status(200).send({ message: 'Product updated successfully', product })
-            : res.status(500).send({ message: 'Product not updated' })
-    } catch (error: any) {
-        res.status(500).send({ message: error.message });
-    }
-}
-
-export const deleteProduct: RequestHandler = async (req: Request, res: Response): Promise<any> => {
-    try {
-        let product = await ProductsModels.findByIdAndUpdate(req.params.id, { deleted: true })
-        product
-            ? res.send({ message: 'Product deleted successfully' })
-            : res.status(500).send({ message: 'Product not found' })
-    } catch (error: any) {
-        res.status(500).send({ message: error.message })
-    };
-};
