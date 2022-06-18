@@ -17,8 +17,8 @@ const userSchema = new mongoose.Schema<IUser>({
     lastname: { type: String, required: [true, 'Lastname is required'] },
     email: { type: String, required: [true, 'Email is required'], unique: true },
     password: { type: String, required: [true, 'Password is required'] },
-    isAdmin: { type: Boolean, default: false},
-    isActive: { type: Boolean, default: true},
+    isAdmin: { type: Boolean, default: false },
+    isActive: { type: Boolean, default: true },
     address: {
         country: { type: String },
         city: { type: String },
@@ -35,7 +35,7 @@ const userSchema = new mongoose.Schema<IUser>({
     },
     payment: [paymentSchema],
     isVerified: { type: Boolean, default: false },
-})
+}, { timestamps: true })
 
 userSchema.pre<IUser>('save', async function (next) {
     const user = this
