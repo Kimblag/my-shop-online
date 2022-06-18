@@ -5,8 +5,6 @@ import ProductsModels from "../models/Products.models"
 import { registerService } from "../services/register.services"
 import { updatePasswordService, updatePersonalDataService } from "../services/userUpdate.services"
 
-//TODO: Declare get and delete users controllers
-
 export const createUserController: RequestHandler = async (req: Request, res: Response, next: NextFunction) => {
     const { name, lastname, email, password } = req.body;
     console.log(req.body)
