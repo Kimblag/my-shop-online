@@ -4,11 +4,11 @@ import { IOrder } from '../interfaces/order.interfaces'
 const orderSchema = new mongoose.Schema<IOrder>({
     userId: { type: String, required: true },
     products: [{
-        productId: { type: String, required: true },
-        quantity: { type: Number, required: true },
-        price: { type: Number, required: true },
+        productId: { type: String },
+        quantity: { type: Number, default: 1 },
     }],
-    total: { type: Number, required: true },
-    status: { type: String, required: true },
-    createdAt: { type: Date, required: true },
-})
+    amount: { type: Number, required: true },
+    status: { type: String, default: 'pending', enum: ['pending', 'completed', 'cancelled'] },
+}, { timestamps: true })
+
+export default mongoose.model<IOrder>('Order', orderSchema)

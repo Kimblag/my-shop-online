@@ -1,7 +1,9 @@
 import IProduct from "./products.interfaces";
 
 export default interface ICart {
-    userId: string;
-    products: Array<IProduct>
-    createdAt: Date;
+    userId: string
+    products: [{
+        productId: string,
+        quantity: number,
+    }]
 }
