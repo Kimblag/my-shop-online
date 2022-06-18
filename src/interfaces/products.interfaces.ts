@@ -9,7 +9,7 @@ export default interface IProduct {
     rating: number;
     stock: number;
     image: string;
-    category: string;
+    category: Array<string>;
     numOfReviews: number;
     reviews: IReview[];
     deleted: boolean;
