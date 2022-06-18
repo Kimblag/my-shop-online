@@ -90,7 +90,6 @@ export const getUsersStatsController: RequestHandler = async (req: Request, res:
     }
 }
 
-
 export const createProductController: RequestHandler = async (req: Request, res: Response): Promise<any> => {
     try {
         let product = new ProductsModels(req.body)
