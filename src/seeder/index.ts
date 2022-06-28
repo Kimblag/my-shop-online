@@ -11,6 +11,7 @@ export const seedProducts = async () => {
             const product = products.map((p) => {
                 return {
                     name: p.title,
+                    brand: p.brand,
                     description: p.description,
                     price: p.price,
                     discountPercentage: p.discountPercentage,

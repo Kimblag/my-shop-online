@@ -7,7 +7,6 @@ import { updatePasswordService, updatePersonalDataService } from "../services/us
 
 export const createUserController: RequestHandler = async (req: Request, res: Response, next: NextFunction) => {
     const { name, lastname, email, password } = req.body;
-    console.log(req.body)
     if (!name || !lastname || !email || !password) {
         return res.status(400).send(<IServerResponse>({ status: 'failed', errors: { message: 'Missing required fields' } }));
     }
@@ -52,7 +51,6 @@ export const deleteUserController: RequestHandler = async (req: Request, res: Re
 export const getUsersController: RequestHandler = async (req: Request, res: Response): Promise<any> => {
     try {
         const query = req.query.new
-        console.log(query)
         const users = query ? await UsersModels.find().sort({ _id: -1 }).limit(5) : await UsersModels.find();
         (users.length > 0)
             ? res.status(200).send(<IServerResponse>({ status: 'success', data: users }))

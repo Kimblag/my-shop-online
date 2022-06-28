@@ -12,7 +12,6 @@ import { products } from '../seeder/products'
 export const getProducts: RequestHandler = async (req: Request, res: Response): Promise<any> => {
     const qNew = req.query.new
     const qCategory = req.query.category
-    console.log(qNew, qCategory)
     try {
         let products;
         if (qNew) {
@@ -33,7 +32,6 @@ export const getProducts: RequestHandler = async (req: Request, res: Response): 
 export const getProduct: RequestHandler = async (req: Request, res: Response): Promise<any> => {
     try {
         let product = await ProductsModels.find({ _id: req.params.id, deleted: false })
-        console.log(product)
         products.length === 0
             ? res.status(404).send({ message: 'There are no products.' })
             : res.status(200).send(product)

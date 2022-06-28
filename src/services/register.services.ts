@@ -27,7 +27,7 @@ export const registerService = async (req: Request): Promise<any> => {
             subject: 'Verify your email',
             html: `<h2> ${newUser.name}! Thanks for registering on our site </h2>
             <h4>Please verify your email to continue...</h4>
-            <a href="http://${req.headers.host}/signup/verify-email?id=${newUser.id}">Verify Your Email</a>`
+            <a href="http://${req.headers.host}/api/register/verify-email?id=${newUser.id}">Verify Your Email</a>`
         }
         await transporter.sendMail(mailOptions, function (error: any, info: any) {
             if (error) {
@@ -37,7 +37,7 @@ export const registerService = async (req: Request): Promise<any> => {
             }
         })
         return {
-            message: 'User created successfully',
+            message: 'User registered successfully',
             user: newUser
         }
     } catch (error: any) {
