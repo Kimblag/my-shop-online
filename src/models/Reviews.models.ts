@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 import IReview from '../interfaces/reviews.interfaces';
 
 const ReviewSchema = new mongoose.Schema<IReview>({
+    userId: { type: String, required: true },
     name: {
         type: String,
         required: [true, 'Name is required'],
@@ -14,14 +15,9 @@ const ReviewSchema = new mongoose.Schema<IReview>({
         type: String,
         required: [true, 'Comment is required'],
     },
-    createdAt: {
-        type: Date,
-        default: Date.now,
-    },
-    product: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Product',
-    },
-});
+    productId: {
+        type: String
+    }
+}, { timestamps: true });
 
 export default mongoose.model<IReview>('Review', ReviewSchema);

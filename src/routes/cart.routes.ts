@@ -4,7 +4,7 @@ import { createCartController, deleteCartController, getAllCartsController, getC
 
 const router = Router()
 
-router.post('/', passport.authenticate('jwt', { session: false }), createCartController)
+router.post('/', createCartController)
 
 router.put('/:id', passport.authenticate('jwt', { session: false }), updateCartController)
 
