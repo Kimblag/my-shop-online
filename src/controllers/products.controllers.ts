@@ -12,8 +12,10 @@ import { products } from '../seeder/products'
 export const getProducts: RequestHandler = async (req: Request, res: Response): Promise<any> => {
     const qNew = req.query.new
     const qCategory = req.query.category
+
     const qName = req.query.name
     console.log(qName)
+
     try {
         let products;
         if (qNew) {

@@ -7,6 +7,7 @@ export const registerController: RequestHandler = async (req: Request, res: Resp
     try {
         const newUser = await registerService(req)
         if (!newUser) return res.status(400).send(<IServerResponse>({ status: 'failed', errors: { message: 'Email already exists.' } }))
+
         return res.status(200).send(<IServerResponse>({ status: 'success', data: newUser.message }))
     } catch (error: any) {
         console.error(error)
