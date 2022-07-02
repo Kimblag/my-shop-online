@@ -1,6 +1,7 @@
 export default{
     JWT: {
-        SECRET: process.env.JWT_SECRET || 'secretjwttoken'},
+        SECRET: process.env.JWT_SECRET || 'secretjwttoken',
+    },
     DB: {
         URI: process.env.MONGODB_URI || 'mongodb://localhost/mern-shop-ts',
         USER: process.env.MONGODB_USER,

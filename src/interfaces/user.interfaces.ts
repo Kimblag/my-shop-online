@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 import { IPayment } from './payment.interfaces';
+import IProduct from './products.interfaces';
 
 
 export default interface IUser extends mongoose.Document {
@@ -24,7 +25,9 @@ export default interface IUser extends mongoose.Document {
         province: string;
         zip: string;
     };
+    favorites: Array<IProduct>
     payment: Array<IPayment>;
     isVerified: boolean;
+    resetToken: string
     comparePassword: (password: string) => Promise<boolean>;
 }
