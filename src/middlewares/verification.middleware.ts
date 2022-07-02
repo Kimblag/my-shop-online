@@ -8,7 +8,7 @@ const verifyEmail = async (req: Request, res: Response, next: NextFunction) => {
         if (user?.isVerified) {
             next()
         } else {
-            console.error('Must verify the email account.')
+            return res.status(400).send('Must verify your email')
         }
     } catch (error: any) {
         console.error(error)

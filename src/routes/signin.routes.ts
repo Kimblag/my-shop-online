@@ -6,7 +6,7 @@ import verifyEmail from '../middlewares/verification.middleware';
 
 const router = Router()
 
-router.post('/', verifyEmail, signinController)
+router.post('/', signinController)
 
 router.get('/user/:id', getUserInfoController)
 

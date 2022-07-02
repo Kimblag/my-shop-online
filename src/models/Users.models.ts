@@ -4,7 +4,6 @@ import { IPayment } from '../interfaces/payment.interfaces';
 import IUser from '../interfaces/user.interfaces'
 
 const paymentSchema = new mongoose.Schema<IPayment>({
-    _id: { type: String, required: true },
     userId: { type: String, required: true },
     status: { type: Number, required: true, default: 0 },
     amount: { type: Number, required: true },
