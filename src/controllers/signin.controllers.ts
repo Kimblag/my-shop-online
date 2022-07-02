@@ -13,6 +13,7 @@ export const signinController: RequestHandler = async (req: Request, res: Respon
     try {
         const user = await getUserService(req.body.email)
         if (!user) return res.status(400).send(<IServerResponse>({ status: 'failed', errors: { message: 'User not found.' } }))
+        if (!user.isVerified) return res.status(400).send(<IServerResponse>({ status: 'failed', errors: { message: 'You must verify your email.' } }))
         const match = await matchPasswordService(user, req.body.password)
         if (!match) return res.status(400).send(<IServerResponse>({ status: 'failed', errors: { message: 'Password is incorrect.' } }))
         return res.status(200).send(<IServerResponse>({ status: 'success', data: { token: createTokenService(user) } }))
