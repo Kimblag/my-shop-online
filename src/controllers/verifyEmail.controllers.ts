@@ -1,5 +1,7 @@
 import {Request, Response} from 'express'
 import UsersModels from '../models/Users.models'
+import dotenv from 'dotenv'
+dotenv.config()
 
 export const verifyEmailcontroller = async (req: Request, res: Response) =>{
     try {
@@ -7,9 +9,9 @@ export const verifyEmailcontroller = async (req: Request, res: Response) =>{
         if(user){
             user.isVerified = true
             await user.save()
-            return res.status(200).redirect('http://localhost:3000/')
+            return res.status(200).redirect(`${process.env.CORS_URL}`)
         } else{
-            res.redirect('http://localhost:3000/') //!Open login form in front
+            res.redirect(`${process.env.CORS_URL}`) //!Open login form in front
         }
     } catch (error) {
         console.error(error)        
