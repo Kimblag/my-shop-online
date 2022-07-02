@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 import IProduct from '../interfaces/products.interfaces'
 
 const productSchema = new mongoose.Schema<IProduct>({
+    _id: { type: String },
     name: { type: String, required: [true, 'Name is required'] },
     description: { type: String, required: [true, 'Description is required'] },
     brand: { type: String },

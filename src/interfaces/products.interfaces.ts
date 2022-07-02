@@ -1,7 +1,7 @@
 import IReview from "./reviews.interfaces"
 
 export default interface IProduct {
-    id?: string;
+    _id: string;
     name: string;
     brand: string;
     description: string;

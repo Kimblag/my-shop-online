@@ -33,8 +33,10 @@ const userSchema = new mongoose.Schema<IUser>({
         province: { type: String },
         zip: { type: String }
     },
+    favorites: [{}],
     payment: [paymentSchema],
     isVerified: { type: Boolean, default: false },
+    resetToken: { type: String }
 }, { timestamps: true })
 
 userSchema.pre<IUser>('save', async function (next) {

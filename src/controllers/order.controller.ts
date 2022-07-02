@@ -1,11 +1,14 @@
 import { Request, RequestHandler, Response } from 'express'
 import IServerResponse from '../interfaces/serverResponse.interfaces'
 import OrdersModels from '../models/Order.models'
+// import { sendOrderEmailSummary } from '../services/order.services'
 
 export const createOrderController: RequestHandler = async (req: Request, res: Response) => {
     const newOrder = new OrdersModels(req.body)
     try {
         const savedOrder = await newOrder.save()
+        //TODO ADD email service with summary
+        // sendOrderEmailSummary(newOrder)
         return res.status(201).send(<IServerResponse>({ status: 'success', data: savedOrder }))
     } catch (error: any) {
         return res.status(400).send(<IServerResponse>({ status: 'error', message: error.message || error }))

@@ -20,3 +20,14 @@ export const signinController: RequestHandler = async (req: Request, res: Respon
         return res.status(error.status || 400).send(<IServerResponse>({ status: 'failed', errors: { message: error.message || error } }))
     }
 }
+
+export const getUserInfoController: RequestHandler = async (req: Request, res: Response): Promise<any> => {
+    try {
+        const user = await UsersModels.findById(req.params.id);
+        user
+            ? res.status(200).send(<IServerResponse>({ status: 'success', data: {name: user.name, id: user._id, lastname: user.lastname, email: user.email, address: user.address, shippingAddress: user.shippingAddress} }))
+            : res.status(404).send(<IServerResponse>({ status: 'error', errors: { message: 'No user found' } }))
+    } catch (error: any) {
+        return res.status(500).send(<IServerResponse>({ status: 'error', errors: { message: error.message || error } }))
+    }
+}

@@ -12,13 +12,19 @@ import { products } from '../seeder/products'
 export const getProducts: RequestHandler = async (req: Request, res: Response): Promise<any> => {
     const qNew = req.query.new
     const qCategory = req.query.category
+
+    const qName = req.query.name
+    console.log(qName)
+
     try {
         let products;
         if (qNew) {
             products = await ProductsModels.find({ deleted: false }).sort({ _id: -1 }).limit(5)
         } else if (qCategory) {
             products = await ProductsModels.find({ deleted: false, category: { $in: [qCategory] } })
-        } else {
+        } else if(qName){
+            products = await ProductsModels.find({deleted: false, name: {'$regex': qName, '$options': 'i'}})
+         } else {
             products = await ProductsModels.find({ deleted: false })
         }
         products.length === 0
