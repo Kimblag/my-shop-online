@@ -83,7 +83,7 @@ export const forgotPasswordService = async (req: Request): Promise<any> => {
         if(!user) throw new Error('Email does not exists')
         var token = createTokenService(user)
         user.resetToken = token
-        verificationLink = `${process.env.URL_CLIENT}/change-password?token=${token}`
+        verificationLink = `${process.env.CORS_URL}/change-password?token=${token}`
         await user.save()
     } catch (error: any) {
         throw Error(error || error.message)
