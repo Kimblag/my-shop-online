@@ -1,7 +1,6 @@
 import { Request, RequestHandler, Response } from 'express'
-import IServerResponse from '../interfaces/serverResponse.interfaces'
+import ServerResponse from '../interfaces/serverResponse.interfaces'
 import OrdersModels from '../models/Order.models'
-// import { sendOrderEmailSummary } from '../services/order.services'
 
 export const createOrderController: RequestHandler = async (req: Request, res: Response) => {
     const newOrder = new OrdersModels(req.body)
@@ -9,27 +8,27 @@ export const createOrderController: RequestHandler = async (req: Request, res: R
         const savedOrder = await newOrder.save()
         //TODO ADD email service with summary
         // sendOrderEmailSummary(newOrder)
-        return res.status(201).send(<IServerResponse>({ status: 'success', data: savedOrder }))
+        return res.status(201).send(<ServerResponse>({ status: 'success', data: savedOrder }))
     } catch (error: any) {
-        return res.status(400).send(<IServerResponse>({ status: 'error', message: error.message || error }))
+        return res.status(400).send(<ServerResponse>({ status: 'error', message: error.message || error }))
     }
 }
 
 export const updateOrderController: RequestHandler = async (req: Request, res: Response) => {
     try {
         await OrdersModels.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
-        return res.status(200).send(<IServerResponse>({ status: 'success', message: 'Order updated' }))
+        return res.status(200).send(<ServerResponse>({ status: 'success', message: 'Order updated' }))
     } catch (error: any) {
-        return res.status(400).send(<IServerResponse>({ status: 'error', message: error.message || error }))
+        return res.status(400).send(<ServerResponse>({ status: 'error', message: error.message || error }))
     }
 }
 
 export const deleteOrderController: RequestHandler = async (req: Request, res: Response) => {
     try {
         await OrdersModels.findByIdAndDelete(req.params.id)
-        return res.status(200).send(<IServerResponse>({ status: 'success', message: 'Order deleted' }))
+        return res.status(200).send(<ServerResponse>({ status: 'success', message: 'Order deleted' }))
     } catch (error: any) {
-        return res.status(400).send(<IServerResponse>({ status: 'error', message: error.message || error }))
+        return res.status(400).send(<ServerResponse>({ status: 'error', message: error.message || error }))
     }
 }
 
@@ -37,19 +36,19 @@ export const getOrderUserController: RequestHandler = async (req: Request, res: 
     try {
         const orders = await OrdersModels.find({ userId: req.params.userId })
         orders.length > 0
-            ? res.status(200).send(<IServerResponse>({ status: 'success', data: orders }))
-            : res.status(404).send(<IServerResponse>({ status: 'error', message: 'No orders found' }))
+            ? res.status(200).send(<ServerResponse>({ status: 'success', data: orders }))
+            : res.status(404).send(<ServerResponse>({ status: 'error', message: 'No orders found' }))
     } catch (error: any) {
-        return res.status(400).send(<IServerResponse>({ status: 'error', message: error.message || error }))
+        return res.status(400).send(<ServerResponse>({ status: 'error', message: error.message || error }))
     }
 }
 
 export const getOrdersController: RequestHandler = async (req: Request, res: Response) => {
     try {
         const orders = await OrdersModels.find()
-        return res.status(200).send(<IServerResponse>({ status: 'success', data: orders }))
+        return res.status(200).send(<ServerResponse>({ status: 'success', data: orders }))
     } catch (error: any) {
-        return res.status(400).send(<IServerResponse>({ status: 'error', message: error.message || error }))
+        return res.status(400).send(<ServerResponse>({ status: 'error', message: error.message || error }))
     }
 }
 
@@ -64,8 +63,8 @@ export const getIncomeController: RequestHandler = async (req: Request, res: Res
             { $project: { month: { $month: "$createdAt" }, sales: "$amount" } },
             { $group: { _id: "$month", total: { $sum: "$sales" } } },
         ])
-        return res.status(200).send(<IServerResponse>({ status: 'success', data: income }))
+        return res.status(200).send(<ServerResponse>({ status: 'success', data: income }))
     } catch (error: any) {
-        return res.status(400).send(<IServerResponse>({ status: 'error', message: error.message || error }))
+        return res.status(400).send(<ServerResponse>({ status: 'error', message: error.message || error }))
     }
 }

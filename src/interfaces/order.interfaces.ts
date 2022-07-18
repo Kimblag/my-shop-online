@@ -1,10 +1,10 @@
-import IProduct from "./products.interfaces";
+import Product from "./products.interfaces";
 
-export interface IOrder {
+export interface Order {
     _id: string;
     userId: string;
     products: [{
-        product: string | IProduct;
+        product: string | Product;
         quantity: number;
     }];
     amount: number;

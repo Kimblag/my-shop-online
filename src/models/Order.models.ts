@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
-import { IOrder } from '../interfaces/order.interfaces'
+import { Order } from '../interfaces/order.interfaces'
 
-const orderSchema = new mongoose.Schema<IOrder>({
+const orderSchema = new mongoose.Schema<Order>({
     userId: { type: String, required: true },
     products: [{
         productId: { type: String },
@@ -11,4 +11,4 @@ const orderSchema = new mongoose.Schema<IOrder>({
     status: { type: String, default: 'pending', enum: ['pending', 'completed', 'cancelled'] },
 }, { timestamps: true })
 
-export default mongoose.model<IOrder>('Order', orderSchema)
+export default mongoose.model<Order>('Order', orderSchema)

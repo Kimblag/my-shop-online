@@ -1,6 +1,5 @@
-import IProduct from "./products.interfaces";
 
-export default interface ICart {
+export default interface Cart {
     userId: string
     products: [{
         productId: string,

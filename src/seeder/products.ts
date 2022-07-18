@@ -9,13 +9,8 @@ export const products = [
         "stock": 94,
         "brand": "Apple",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/1/thumbnail.jpg",
         "images": [
             "https://sc04.alicdn.com/kf/Hd00722b5460843da9aa0bde1514c3a6fM.png",
-            "https://dummyjson.com/image/i/products/1/2.jpg",
-            "https://dummyjson.com/image/i/products/1/3.jpg",
-            "https://dummyjson.com/image/i/products/1/4.jpg",
-            "https://dummyjson.com/image/i/products/1/thumbnail.jpg"
         ]
     },
     {
@@ -28,12 +23,8 @@ export const products = [
         "stock": 34,
         "brand": "Apple",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/2/thumbnail.jpg",
         "images": [
-            "https://sc04.alicdn.com/kf/Hd00722b5460843da9aa0bde1514c3a6fM.png",
-            "https://dummyjson.com/image/i/products/2/2.jpg",
-            "https://dummyjson.com/image/i/products/2/3.jpg",
-            "https://dummyjson.com/image/i/products/2/thumbnail.jpg"
+            "https://e7.pngegg.com/pngimages/599/150/png-clipart-iphone-x-front-view-apple%E6%89%8B%E6%9C%BA-iphone.png",
         ]
     },
     {
@@ -61,13 +52,8 @@ export const products = [
         "stock": 123,
         "brand": "Samsung",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/4/thumbnail.jpg",
         "images": [
             "https://i.pinimg.com/originals/09/ed/d7/09edd72d55fe8b24b88e112cd0696c11.png",
-            "https://dummyjson.com/image/i/products/4/2.jpg",
-            "https://dummyjson.com/image/i/products/4/3.jpg",
-            "https://dummyjson.com/image/i/products/4/4.jpg",
-            "https://dummyjson.com/image/i/products/4/thumbnail.jpg"
         ]
     },
 
@@ -81,28 +67,22 @@ export const products = [
         "stock": 32,
         "brand": "Beats",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/5/thumbnail.jpg",
         "images": [
             "https://i.pinimg.com/originals/81/06/06/8106063a18d8eaf0e40ee0021f26d387.png",
-            "https://dummyjson.com/image/i/products/5/2.jpg",
-            "https://dummyjson.com/image/i/products/5/3.jpg"
         ]
     },
     {
         "id": 28,
         "title": "Headphones Beats by Dre",
         "description": "Headphones Beats by Dre",
-        "price": 499,
+        "price": 350,
         "discountPercentage": 10.58,
         "rating": 4.09,
         "stock": 32,
         "brand": "Beats",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/5/thumbnail.jpg",
         "images": [
             "https://techbooky.com/wp-content/uploads/2016/09/BeatsX.png",
-            "https://dummyjson.com/image/i/products/5/2.jpg",
-            "https://dummyjson.com/image/i/products/5/3.jpg"
         ]
     },
     {
@@ -115,11 +95,8 @@ export const products = [
         "stock": 32,
         "brand": "Huawei",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/5/thumbnail.jpg",
         "images": [
             "https://media.pakprice.pk/253/1GKgb3UpueAbca8BKwgETFniiHqIu1eAPo7dU2yL.png",
-            "https://dummyjson.com/image/i/products/5/2.jpg",
-            "https://dummyjson.com/image/i/products/5/3.jpg"
         ]
     },
     {
@@ -132,12 +109,8 @@ export const products = [
         "stock": 83,
         "brand": "Apple",
         "category": "Notebooks",
-        "thumbnail": "https://dummyjson.com/image/i/products/6/thumbnail.png",
         "images": [
             "https://westdream.ru/wp-content/uploads/2021/01/%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0%D0%9F%D0%A0%D0%9E%D0%95%D0%9A%D0%A2_%D0%AE%D1%82%D0%AE%D0%B1-2.png",
-            "https://dummyjson.com/image/i/products/6/2.jpg",
-            "https://dummyjson.com/image/i/products/6/3.png",
-            "https://dummyjson.com/image/i/products/6/4.jpg"
         ]
     },
     {
@@ -149,13 +122,9 @@ export const products = [
         "rating": 4.25,
         "stock": 50,
         "brand": "Samsung",
-        "category": "Notebooks",
-        "thumbnail": "https://dummyjson.com/image/i/products/7/thumbnail.jpg",
+        "category": "Smartphones",
         "images": [
             "https://cdn.shopify.com/s/files/1/0253/7950/4206/products/samsung-galaxy-s9-plus-unlocked-all-carriers-phone-daddy_920x.png?v=1638338742",
-            "https://dummyjson.com/image/i/products/7/2.jpg",
-            "https://dummyjson.com/image/i/products/7/3.jpg",
-            "https://dummyjson.com/image/i/products/7/thumbnail.jpg"
         ]
     },
     {
@@ -168,13 +137,8 @@ export const products = [
         "stock": 68,
         "brand": "Microsoft",
         "category": "Notebooks",
-        "thumbnail": "https://dummyjson.com/image/i/products/8/thumbnail.jpg",
         "images": [
             "https://899570.smushcdn.com/2134735/wp-content/uploads/2021/11/920px_EliteBookx360_JMA.png?lossy=1&strip=1&webp=1",
-            "https://dummyjson.com/image/i/products/8/2.jpg",
-            "https://dummyjson.com/image/i/products/8/3.jpg",
-            "https://dummyjson.com/image/i/products/8/4.jpg",
-            "https://dummyjson.com/image/i/products/8/thumbnail.jpg"
         ]
     },
     {
@@ -186,14 +150,9 @@ export const products = [
         "rating": 4.54,
         "stock": 96,
         "brand": "Infinix",
-        "category": "Notebooks",
-        "thumbnail": "https://dummyjson.com/image/i/products/9/thumbnail.jpg",
+        "category": "Smartphones",
         "images": [
             "https://teknostyle.id/wp-content/uploads/2021/10/10791167-8EC6-4BAF-BCE4-DE2D69B53DC4.png",
-            "https://dummyjson.com/image/i/products/9/2.png",
-            "https://dummyjson.com/image/i/products/9/3.png",
-            "https://dummyjson.com/image/i/products/9/4.jpg",
-            "https://dummyjson.com/image/i/products/9/thumbnail.jpg"
         ]
     },
     {
@@ -206,30 +165,22 @@ export const products = [
         "stock": 89,
         "brand": "HP",
         "category": "Notebooks",
-        "thumbnail": "https://dummyjson.com/image/i/products/10/thumbnail.jpeg",
         "images": [
             "https://899570.smushcdn.com/2134735/wp-content/uploads/2021/02/920px_EliteFolio.png?lossy=1&strip=1&webp=1",
-            "https://dummyjson.com/image/i/products/10/2.jpg",
-            "https://dummyjson.com/image/i/products/10/3.jpg",
-            "https://dummyjson.com/image/i/products/10/thumbnail.jpeg"
         ]
     },
     {
         "id": 11,
         "title": "Apple iPad Air 2020 256GB Wifi 10.9-inch",
         "description": "Apple iPad Air 2020 256GB Wifi 10.9-inch - Sky Blue",
-        "price": 13,
+        "price": 1350,
         "discountPercentage": 8.4,
         "rating": 4.26,
         "stock": 65,
         "brand": "Apple",
         "category": "Tablets",
-        "thumbnail": "https://dummyjson.com/image/i/products/11/thumbnail.jpg",
         "images": [
             "https://ianleblanc.com/images/white%20simple.png",
-            "https://dummyjson.com/image/i/products/11/2.jpg",
-            "https://dummyjson.com/image/i/products/11/3.jpg",
-            "https://dummyjson.com/image/i/products/11/thumbnail.jpg"
         ]
     },
     {
@@ -242,12 +193,8 @@ export const products = [
         "stock": 89,
         "brand": "HP",
         "category": "Notebooks",
-        "thumbnail": "https://dummyjson.com/image/i/products/10/thumbnail.jpeg",
         "images": [
             "https://899570.smushcdn.com/2134735/wp-content/uploads/2021/02/920px_EliteFolio.png?lossy=1&strip=1&webp=1",
-            "https://dummyjson.com/image/i/products/10/2.jpg",
-            "https://dummyjson.com/image/i/products/10/3.jpg",
-            "https://dummyjson.com/image/i/products/10/thumbnail.jpeg"
         ]
     },
     {
@@ -260,13 +207,8 @@ export const products = [
         "stock": 94,
         "brand": "Apple",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/1/thumbnail.jpg",
         "images": [
             "https://sc04.alicdn.com/kf/Hd00722b5460843da9aa0bde1514c3a6fM.png",
-            "https://dummyjson.com/image/i/products/1/2.jpg",
-            "https://dummyjson.com/image/i/products/1/3.jpg",
-            "https://dummyjson.com/image/i/products/1/4.jpg",
-            "https://dummyjson.com/image/i/products/1/thumbnail.jpg"
         ]
     },
     {
@@ -279,12 +221,8 @@ export const products = [
         "stock": 83,
         "brand": "Apple",
         "category": "Notebooks",
-        "thumbnail": "https://dummyjson.com/image/i/products/6/thumbnail.png",
         "images": [
             "https://westdream.ru/wp-content/uploads/2021/01/%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0%D0%9F%D0%A0%D0%9E%D0%95%D0%9A%D0%A2_%D0%AE%D1%82%D0%AE%D0%B1-2.png",
-            "https://dummyjson.com/image/i/products/6/2.jpg",
-            "https://dummyjson.com/image/i/products/6/3.png",
-            "https://dummyjson.com/image/i/products/6/4.jpg"
         ]
     },
     {
@@ -297,12 +235,8 @@ export const products = [
         "stock": 34,
         "brand": "Apple",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/2/thumbnail.jpg",
         "images": [
             "https://sc04.alicdn.com/kf/Hd00722b5460843da9aa0bde1514c3a6fM.png",
-            "https://dummyjson.com/image/i/products/2/2.jpg",
-            "https://dummyjson.com/image/i/products/2/3.jpg",
-            "https://dummyjson.com/image/i/products/2/thumbnail.jpg"
         ]
     },
     {
@@ -315,13 +249,8 @@ export const products = [
         "stock": 123,
         "brand": "Samsung",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/4/thumbnail.jpg",
         "images": [
             "https://i.pinimg.com/originals/09/ed/d7/09edd72d55fe8b24b88e112cd0696c11.png",
-            "https://dummyjson.com/image/i/products/4/2.jpg",
-            "https://dummyjson.com/image/i/products/4/3.jpg",
-            "https://dummyjson.com/image/i/products/4/4.jpg",
-            "https://dummyjson.com/image/i/products/4/thumbnail.jpg"
         ]
     },
     {
@@ -334,13 +263,8 @@ export const products = [
         "stock": 94,
         "brand": "Apple",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/1/thumbnail.jpg",
         "images": [
             "https://sc04.alicdn.com/kf/Hd00722b5460843da9aa0bde1514c3a6fM.png",
-            "https://dummyjson.com/image/i/products/1/2.jpg",
-            "https://dummyjson.com/image/i/products/1/3.jpg",
-            "https://dummyjson.com/image/i/products/1/4.jpg",
-            "https://dummyjson.com/image/i/products/1/thumbnail.jpg"
         ]
     },
     {
@@ -353,11 +277,8 @@ export const products = [
         "stock": 32,
         "brand": "Huawei",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/5/thumbnail.jpg",
         "images": [
             "https://media.pakprice.pk/253/1GKgb3UpueAbca8BKwgETFniiHqIu1eAPo7dU2yL.png",
-            "https://dummyjson.com/image/i/products/5/2.jpg",
-            "https://dummyjson.com/image/i/products/5/3.jpg"
         ]
     },
     {
@@ -370,12 +291,8 @@ export const products = [
         "stock": 89,
         "brand": "HP",
         "category": "Notebooks",
-        "thumbnail": "https://dummyjson.com/image/i/products/10/thumbnail.jpeg",
         "images": [
             "https://899570.smushcdn.com/2134735/wp-content/uploads/2021/02/920px_EliteFolio.png?lossy=1&strip=1&webp=1",
-            "https://dummyjson.com/image/i/products/10/2.jpg",
-            "https://dummyjson.com/image/i/products/10/3.jpg",
-            "https://dummyjson.com/image/i/products/10/thumbnail.jpeg"
         ]
     },
     {
@@ -388,31 +305,22 @@ export const products = [
         "stock": 83,
         "brand": "Apple",
         "category": "Notebooks",
-        "thumbnail": "https://dummyjson.com/image/i/products/6/thumbnail.png",
         "images": [
             "https://westdream.ru/wp-content/uploads/2021/01/%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0%D0%9F%D0%A0%D0%9E%D0%95%D0%9A%D0%A2_%D0%AE%D1%82%D0%AE%D0%B1-2.png",
-            "https://dummyjson.com/image/i/products/6/2.jpg",
-            "https://dummyjson.com/image/i/products/6/3.png",
-            "https://dummyjson.com/image/i/products/6/4.jpg"
         ]
     },
     {
         "id": 21,
         "title": "iPhone 9",
         "description": "An Apple mobile which is nothing like Apple",
-        "price": 549,
+        "price": 630,
         "discountPercentage": 12.96,
         "rating": 4.69,
         "stock": 94,
         "brand": "Apple",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/1/thumbnail.jpg",
         "images": [
             "https://sc04.alicdn.com/kf/Hd00722b5460843da9aa0bde1514c3a6fM.png",
-            "https://dummyjson.com/image/i/products/1/2.jpg",
-            "https://dummyjson.com/image/i/products/1/3.jpg",
-            "https://dummyjson.com/image/i/products/1/4.jpg",
-            "https://dummyjson.com/image/i/products/1/thumbnail.jpg"
         ]
     },
     {
@@ -425,30 +333,22 @@ export const products = [
         "stock": 83,
         "brand": "Apple",
         "category": "Notebooks",
-        "thumbnail": "https://dummyjson.com/image/i/products/6/thumbnail.png",
         "images": [
             "https://westdream.ru/wp-content/uploads/2021/01/%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0%D0%9F%D0%A0%D0%9E%D0%95%D0%9A%D0%A2_%D0%AE%D1%82%D0%AE%D0%B1-2.png",
-            "https://dummyjson.com/image/i/products/6/2.jpg",
-            "https://dummyjson.com/image/i/products/6/3.png",
-            "https://dummyjson.com/image/i/products/6/4.jpg"
         ]
     },
     {
         "id": 23,
         "title": "iPhone X",
         "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-        "price": 899,
+        "price": 1500,
         "discountPercentage": 17.94,
         "rating": 4.44,
         "stock": 34,
         "brand": "Apple",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/2/thumbnail.jpg",
         "images": [
             "https://sc04.alicdn.com/kf/Hd00722b5460843da9aa0bde1514c3a6fM.png",
-            "https://dummyjson.com/image/i/products/2/2.jpg",
-            "https://dummyjson.com/image/i/products/2/3.jpg",
-            "https://dummyjson.com/image/i/products/2/thumbnail.jpg"
         ]
     },
     {
@@ -461,13 +361,8 @@ export const products = [
         "stock": 123,
         "brand": "Samsung",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/4/thumbnail.jpg",
         "images": [
             "https://i.pinimg.com/originals/09/ed/d7/09edd72d55fe8b24b88e112cd0696c11.png",
-            "https://dummyjson.com/image/i/products/4/2.jpg",
-            "https://dummyjson.com/image/i/products/4/3.jpg",
-            "https://dummyjson.com/image/i/products/4/4.jpg",
-            "https://dummyjson.com/image/i/products/4/thumbnail.jpg"
         ]
     },
     {
@@ -480,47 +375,36 @@ export const products = [
         "stock": 32,
         "brand": "Huawei",
         "category": "Smartphones",
-        "thumbnail": "https://dummyjson.com/image/i/products/5/thumbnail.jpg",
         "images": [
             "https://media.pakprice.pk/253/1GKgb3UpueAbca8BKwgETFniiHqIu1eAPo7dU2yL.png",
-            "https://dummyjson.com/image/i/products/5/2.jpg",
-            "https://dummyjson.com/image/i/products/5/3.jpg"
         ]
     },
     {
         "id": 26,
         "title": "Apple iPad Air 2020 256GB 10.9-inch",
         "description": "Apple iPad Air 2020 256GB Wifi 10.9-inch - Sky Blue",
-        "price": 13,
+        "price": 1100,
         "discountPercentage": 8.4,
         "rating": 4.26,
         "stock": 65,
         "brand": "Apple",
         "category": "Tablets",
-        "thumbnail": "https://dummyjson.com/image/i/products/11/thumbnail.jpg",
         "images": [
             "https://ianleblanc.com/images/white%20simple.png",
-            "https://dummyjson.com/image/i/products/11/2.jpg",
-            "https://dummyjson.com/image/i/products/11/3.jpg",
-            "https://dummyjson.com/image/i/products/11/thumbnail.jpg"
         ]
     },
     {
         "id": 27,
         "title": "Apple Mini iPad Air 2020 256GB Wifi 10.9-inch",
         "description": "Apple iPad Air 2020 256GB Wifi 10.9-inch - Sky Blue",
-        "price": 13,
+        "price": 950,
         "discountPercentage": 8.4,
         "rating": 4.26,
         "stock": 65,
         "brand": "Apple",
         "category": "Tablets",
-        "thumbnail": "https://dummyjson.com/image/i/products/11/thumbnail.jpg",
         "images": [
             "https://ianleblanc.com/images/white%20simple.png",
-            "https://dummyjson.com/image/i/products/11/2.jpg",
-            "https://dummyjson.com/image/i/products/11/3.jpg",
-            "https://dummyjson.com/image/i/products/11/thumbnail.jpg"
         ]
     },
 ]
