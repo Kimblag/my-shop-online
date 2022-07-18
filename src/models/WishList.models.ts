@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
-import { IWishlist } from "../interfaces/wishlist.interfaces";
+import { Wishlist } from "../interfaces/wishlist.interfaces";
 
-const wishlistSchema = new mongoose.Schema<IWishlist>({
+const wishlistSchema = new mongoose.Schema<Wishlist>({
     userId: { type: String, required: true },
     favorites: { }
 })
 
-export default mongoose.model<IWishlist>('Wishlist', wishlistSchema)
+export default mongoose.model<Wishlist>('Wishlist', wishlistSchema)

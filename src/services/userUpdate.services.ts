@@ -1,6 +1,6 @@
 import { Request } from 'express'
-import IProduct from '../interfaces/products.interfaces'
-import IUser from '../interfaces/user.interfaces'
+import Product from '../interfaces/products.interfaces'
+import User from '../interfaces/user.interfaces'
 import UsersModels from '../models/Users.models'
 import nodemailer from 'nodemailer'
 import config from '../config'
@@ -35,7 +35,7 @@ export const updatePasswordService = async (password: string, id: string): Promi
 export const updatePersonalDataService = async (req: Request, id: string) => {
     try {
         const query = { _id: id }
-        const update: IUser = req.body
+        const update: User = req.body
 
         UsersModels.findOneAndUpdate(query, update, (err: any, result: any) => {
             if (err) return false
@@ -47,13 +47,10 @@ export const updatePersonalDataService = async (req: Request, id: string) => {
 }
 
 export const addProductFavorite = async (req: Request, id: string) => {
-    const product: IProduct = req.body.favorites
+    const product: Product = req.body.favorites
     console.log(id)
     try {
         UsersModels.findById(id, product, async (err: any, result: any) => {
-            // if (err) return false
-            // result.favorites = product
-            // await result.save()
             console.log(result)
         })
     } catch (error) {

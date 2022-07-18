@@ -28,8 +28,8 @@ export const getProducts: RequestHandler = async (req: Request, res: Response): 
             products = await ProductsModels.find({ deleted: false })
         }
         products.length === 0
-            ? res.status(404).send({ message: 'There are no products.' })
-            : res.status(200).send(products)
+            ? res.status(201).send({ message: 'There are no products.', data: products })
+            : res.status(200).send({message:'success', data: products})
     } catch (error: any) {
         res.status(500).send({ message: error.message })
     }

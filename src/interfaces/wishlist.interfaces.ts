@@ -1,6 +1,6 @@
-import IProduct from "./products.interfaces"
+import Product from "./products.interfaces"
 
-export interface IWishlist{
+export interface Wishlist{
     userId: string
-    favorites: Array<IProduct>
+    favorites: Array<Product>
 }
