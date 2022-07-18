@@ -1,4 +1,4 @@
-import IUser from '../interfaces/user.interfaces'
+import User from '../interfaces/user.interfaces'
 import UsersModels from '../models/Users.models'
 import config from '../config'
 
@@ -11,7 +11,7 @@ export const getUserService = async (email: string): Promise<any> => {
     }
 }
 
-export const matchPasswordService = async (user: IUser, password: string): Promise<boolean> => {
+export const matchPasswordService = async (user: User, password: string): Promise<boolean> => {
     try {
         const isMatch: boolean = await user.comparePassword(password)
         return isMatch

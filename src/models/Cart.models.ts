@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
-import ICart from '../interfaces/cart.interfaces'
+import Cart from '../interfaces/cart.interfaces'
 
-const cartSchema = new mongoose.Schema<ICart>({
+const cartSchema = new mongoose.Schema<Cart>({
     userId: { type: String, required: true },
     products: [{
         productId: { type: String },
@@ -9,4 +9,4 @@ const cartSchema = new mongoose.Schema<ICart>({
     }],
 }, { timestamps: true })
 
-export default mongoose.model<ICart>('Cart', cartSchema)
+export default mongoose.model<Cart>('Cart', cartSchema)

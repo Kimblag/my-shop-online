@@ -1,4 +1,4 @@
-export default interface IServerResponse{
+export default interface ServerResponse{
     status: string,
     message: string,
     data?: any

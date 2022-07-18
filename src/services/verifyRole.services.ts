@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
-import IUser from "../interfaces/user.interfaces";
+import User from "../interfaces/user.interfaces";
 
 interface RequestWithUserRole extends Request {
-    user?: IUser;
+    user?: User;
 }
 
 export const roleVerifyService = (req: RequestWithUserRole, res: Response, next: NextFunction) => {

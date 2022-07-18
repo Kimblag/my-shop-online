@@ -8,8 +8,8 @@ export default{
         PASSWORD: process.env.MONGODB_PASSWORD,
     },
     NODEMAILER: {
-        SERVICE: 'gmail',
-        USER: "store.henry.shoes@gmail.com",
-        PASSWORD: "bctgrvsmdyqhacge"
+        SERVICE: process.env.NODEMAILER_SERVICE ||'gmail',
+        USER: process.env.NODEMAILER_USER || "store.henry.shoes@gmail.com",
+        PASSWORD: process.env.NODEMAILER_PASSWORD || "bctgrvsmdyqhacge"
     }
 }

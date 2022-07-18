@@ -1,17 +1,10 @@
 import bcrypt from 'bcrypt';
 import mongoose from 'mongoose'
-import { IPayment } from '../interfaces/payment.interfaces';
-import IUser from '../interfaces/user.interfaces'
+import User from '../interfaces/user.interfaces'
 
-const paymentSchema = new mongoose.Schema<IPayment>({
-    userId: { type: String, required: true },
-    status: { type: Number, required: true, default: 0 },
-    amount: { type: Number, required: true },
-    description: { type: String, required: true },
-    createdAt: { type: Date, required: true },
-})
 
-const userSchema = new mongoose.Schema<IUser>({
+
+const userSchema = new mongoose.Schema<User>({
     name: { type: String, required: [true, 'Name is required'] },
     lastname: { type: String, required: [true, 'Lastname is required'] },
     email: { type: String, required: [true, 'Email is required'], unique: true },
@@ -33,12 +26,11 @@ const userSchema = new mongoose.Schema<IUser>({
         zip: { type: String }
     },
     favorites: [{}],
-    payment: [paymentSchema],
     isVerified: { type: Boolean, default: false },
     resetToken: { type: String }
 }, { timestamps: true })
 
-userSchema.pre<IUser>('save', async function (next) {
+userSchema.pre<User>('save', async function (next) {
     const user = this
     if (!user.isModified('password')) return next()
     try {
@@ -61,4 +53,4 @@ userSchema.methods.comparePassword = async function (password: string) {
     }
 }
 
-export default mongoose.model<IUser>('User', userSchema)
+export default mongoose.model<User>('User', userSchema)
